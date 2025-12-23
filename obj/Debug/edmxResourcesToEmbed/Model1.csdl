@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="lastyrorder_Result">
+    <Property Name="custid" Type="Int32" />
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="orderdate" Type="DateTime" />
+    <Property Name="ordproduct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="qty" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="customer10">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="caddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+    <Property Name="caddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cphone" Type="Int32" />
+    <NavigationProperty Name="orders" Relationship="Self.FK__orders__custid__25A691D2" FromRole="customers" ToRole="orders" />
+    <NavigationProperty Name="orders1" Relationship="Self.FK__orders1__custid__2C538F61" FromRole="customers" ToRole="orders1" />
+    <NavigationProperty Name="Orders11" Relationship="Self.FK__Orders11__CustID__45DE573A" FromRole="customers" ToRole="Orders11" />
+    <NavigationProperty Name="Orders12" Relationship="Self.FK__Orders12__CustID__515009E6" FromRole="customers" ToRole="Orders12" />
+  </EntityType>
+  <EntityType Name="customers1">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+    <Property Name="caddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cphone" Type="Int32" />
+    <NavigationProperty Name="orders2" Relationship="Self.FK__orders2__custid__30242045" FromRole="customers1" ToRole="orders2" />
+  </EntityType>
+  <EntityType Name="Customers11">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="Int32" Nullable="false" />
+    <Property Name="CustName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="customers2">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="caddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="orders4" Relationship="Self.FK__orders4__custid__49E3F248" FromRole="customers2" ToRole="orders4" />
+    <NavigationProperty Name="orders5" Relationship="Self.FK__orders5__custid__51851410" FromRole="customers2" ToRole="orders5" />
+  </EntityType>
+  <EntityType Name="customers4">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="caddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="orders6" Relationship="Self.FK__orders6__custid__5832119F" FromRole="customers4" ToRole="orders6" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="Int32" Nullable="false" />
+    <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Emp1" Relationship="Self.FK__Emp1__DeptID__0A888742" FromRole="Department" ToRole="Emp1" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__DeptID__71BCD978" FromRole="Department" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Department1">
+    <Key>
+      <PropertyRef Name="DeptId" />
+    </Key>
+    <Property Name="DeptId" Type="Int32" Nullable="false" />
+    <Property Name="DeptName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Dept1">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="Int32" Nullable="false" />
+    <Property Name="DeptName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Emp1">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="DateOfJoin" Type="DateTime" Precision="0" />
+    <Property Name="DeptID" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Emp1__DeptID__0A888742" FromRole="Emp1" ToRole="Department" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="DateOfJoin" Type="DateTime" Precision="0" />
+    <Property Name="DeptID" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Employee__DeptID__71BCD978" FromRole="Employee" ToRole="Department" />
+  </EntityType>
+  <EntityType Name="Employee1">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="Int32" Nullable="false" />
+    <Property Name="EmpName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeptId" Type="Int32" />
+    <Property Name="ManagerId" Type="Int32" />
+    <Property Name="JoinDate" Type="DateTime" Precision="0" />
+    <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="one">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="Int32" Nullable="false" />
+    <Property Name="cname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OrderDetails11">
+    <Key>
+      <PropertyRef Name="DetailID" />
+    </Key>
+    <Property Name="DetailID" Type="Int32" Nullable="false" />
+    <Property Name="OrderID" Type="Int32" />
+    <Property Name="ProductID" Type="Int32" />
+    <Property Name="Qty" Type="Int32" />
+    <NavigationProperty Name="order" Relationship="Self.FK__OrderDeta__Order__49AEE81E" FromRole="OrderDetails11" ToRole="orders" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__4AA30C57" FromRole="OrderDetails11" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="orderhistory">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="custid" Type="Int32" />
+    <Property Name="orderdate" Type="DateTime" Precision="0" />
+    <Property Name="oproduct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="quantity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="custid" Type="Int32" />
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="orderdate" Type="DateTime" Precision="0" />
+    <Property Name="ordproduct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="qty" Type="Int32" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__orders__custid__25A691D2" FromRole="orders" ToRole="customers" />
+    <NavigationProperty Name="OrderDetails11" Relationship="Self.FK__OrderDeta__Order__49AEE81E" FromRole="orders" ToRole="OrderDetails11" />
+    <NavigationProperty Name="Payments" Relationship="Self.FK__Payments__OrderI__4E739D3B" FromRole="orders" ToRole="Payments" />
+  </EntityType>
+  <EntityType Name="orders1">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="custid" Type="Int32" />
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="orderdate" Type="DateTime" Precision="0" />
+    <Property Name="ordproduct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="qty" Type="Int32" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__orders1__custid__2C538F61" FromRole="orders1" ToRole="customers" />
+  </EntityType>
+  <EntityType Name="Orders11">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="CustID" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__Orders11__CustID__45DE573A" FromRole="Orders11" ToRole="customers" />
+  </EntityType>
+  <EntityType Name="Orders12">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="CustID" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="Statuss" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__Orders12__CustID__515009E6" FromRole="Orders12" ToRole="customers" />
+  </EntityType>
+  <EntityType Name="orders2">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="custid" Type="Int32" />
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="orderdate" Type="DateTime" Precision="0" />
+    <Property Name="ordproduct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="qty" Type="Int32" />
+    <NavigationProperty Name="customers1" Relationship="Self.FK__orders2__custid__30242045" FromRole="orders2" ToRole="customers1" />
+  </EntityType>
+  <EntityType Name="orders4">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="custid" Type="Int32" />
+    <Property Name="productid" Type="Int32" />
+    <Property Name="orderdate" Type="DateTime" Precision="0" />
+    <Property Name="qty" Type="Int32" />
+    <Property Name="price" Type="Int32" />
+    <NavigationProperty Name="customers2" Relationship="Self.FK__orders4__custid__49E3F248" FromRole="orders4" ToRole="customers2" />
+    <NavigationProperty Name="products4" Relationship="Self.FK__orders4__product__4AD81681" FromRole="orders4" ToRole="products4" />
+  </EntityType>
+  <EntityType Name="orders5">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="custid" Type="Int32" />
+    <Property Name="productid" Type="Int32" />
+    <Property Name="orderdate" Type="DateTime" Precision="0" />
+    <Property Name="qty" Type="Int32" />
+    <Property Name="price" Type="Int32" />
+    <NavigationProperty Name="customers2" Relationship="Self.FK__orders5__custid__51851410" FromRole="orders5" ToRole="customers2" />
+    <NavigationProperty Name="products5" Relationship="Self.FK__orders5__product__52793849" FromRole="orders5" ToRole="products5" />
+  </EntityType>
+  <EntityType Name="orders6">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="custid" Type="Int32" />
+    <Property Name="productid" Type="Int32" />
+    <Property Name="orderdate" Type="DateTime" Precision="0" />
+    <Property Name="qty" Type="Int32" />
+    <Property Name="price" Type="Int32" />
+    <NavigationProperty Name="customers4" Relationship="Self.FK__orders6__custid__5832119F" FromRole="orders6" ToRole="customers4" />
+    <NavigationProperty Name="products5" Relationship="Self.FK__orders6__product__592635D8" FromRole="orders6" ToRole="products5" />
+  </EntityType>
+  <EntityType Name="Orderss">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="order_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Orderss1">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="Int32" Nullable="false" />
+    <Property Name="ordername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="Int32" Nullable="false" />
+    <Property Name="OrderID" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="order" Relationship="Self.FK__Payments__OrderI__4E739D3B" FromRole="Payments" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Stock" Type="Int32" />
+    <NavigationProperty Name="OrderDetails11" Relationship="Self.FK__OrderDeta__Produ__4AA30C57" FromRole="Products" ToRole="OrderDetails11" />
+  </EntityType>
+  <EntityType Name="products1">
+    <Key>
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="productid" Type="Int32" Nullable="false" />
+    <Property Name="productname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="products4">
+    <Key>
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="productid" Type="Int32" Nullable="false" />
+    <Property Name="productname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="orders4" Relationship="Self.FK__orders4__product__4AD81681" FromRole="products4" ToRole="orders4" />
+  </EntityType>
+  <EntityType Name="products5">
+    <Key>
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="productid" Type="Int32" Nullable="false" />
+    <Property Name="productname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="orders5" Relationship="Self.FK__orders5__product__52793849" FromRole="products5" ToRole="orders5" />
+    <NavigationProperty Name="orders6" Relationship="Self.FK__orders6__product__592635D8" FromRole="products5" ToRole="orders6" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="Int32" Nullable="false" />
+    <Property Name="EmpId" Type="Int32" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SaleAmount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="SaleDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransId" />
+    </Key>
+    <Property Name="TransId" Type="Int32" Nullable="false" />
+    <Property Name="AccountId" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="TransDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="two">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="Int32" Nullable="false" />
+    <Property Name="cname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="customernew">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+    <Property Name="caddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cphone" Type="Int32" />
+  </EntityType>
+  <EntityType Name="customernew1">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+    <Property Name="caddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cphone" Type="Int32" />
+  </EntityType>
+  <EntityType Name="customersnew">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+    <Property Name="caddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cphone" Type="Int32" />
+  </EntityType>
+  <EntityType Name="errorlog">
+    <Key>
+      <PropertyRef Name="error_id" />
+    </Key>
+    <Property Name="error_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="errormessage" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="errorseverity" Type="Int32" />
+    <Property Name="errorstate" Type="Int32" />
+    <Property Name="error_time" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MSreplication_options">
+    <Key>
+      <PropertyRef Name="optname" />
+      <PropertyRef Name="value" />
+      <PropertyRef Name="major_version" />
+      <PropertyRef Name="minor_version" />
+      <PropertyRef Name="revision" />
+      <PropertyRef Name="install_failures" />
+    </Key>
+    <Property Name="optname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="value" Type="Boolean" Nullable="false" />
+    <Property Name="major_version" Type="Int32" Nullable="false" />
+    <Property Name="minor_version" Type="Int32" Nullable="false" />
+    <Property Name="revision" Type="Int32" Nullable="false" />
+    <Property Name="install_failures" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="spt_fallback_db">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="dbid" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xfallback_dbid" Type="Int16" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dbid" Type="Int16" Nullable="false" />
+    <Property Name="status" Type="Int16" Nullable="false" />
+    <Property Name="version" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="spt_fallback_dev">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="low" />
+      <PropertyRef Name="high" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="phyname" />
+    </Key>
+    <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xfallback_low" Type="Int32" />
+    <Property Name="xfallback_drive" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="low" Type="Int32" Nullable="false" />
+    <Property Name="high" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int16" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phyname" Type="String" MaxLength="127" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="spt_fallback_usg">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="dbid" />
+      <PropertyRef Name="segmap" />
+      <PropertyRef Name="lstart" />
+      <PropertyRef Name="sizepg" />
+      <PropertyRef Name="vstart" />
+    </Key>
+    <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="xfallback_vstart" Type="Int32" />
+    <Property Name="dbid" Type="Int16" Nullable="false" />
+    <Property Name="segmap" Type="Int32" Nullable="false" />
+    <Property Name="lstart" Type="Int32" Nullable="false" />
+    <Property Name="sizepg" Type="Int32" Nullable="false" />
+    <Property Name="vstart" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="spt_monitor">
+    <Key>
+      <PropertyRef Name="lastrun" />
+      <PropertyRef Name="cpu_busy" />
+      <PropertyRef Name="io_busy" />
+      <PropertyRef Name="idle" />
+      <PropertyRef Name="pack_received" />
+      <PropertyRef Name="pack_sent" />
+      <PropertyRef Name="connections" />
+      <PropertyRef Name="pack_errors" />
+      <PropertyRef Name="total_read" />
+      <PropertyRef Name="total_write" />
+      <PropertyRef Name="total_errors" />
+    </Key>
+    <Property Name="lastrun" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cpu_busy" Type="Int32" Nullable="false" />
+    <Property Name="io_busy" Type="Int32" Nullable="false" />
+    <Property Name="idle" Type="Int32" Nullable="false" />
+    <Property Name="pack_received" Type="Int32" Nullable="false" />
+    <Property Name="pack_sent" Type="Int32" Nullable="false" />
+    <Property Name="connections" Type="Int32" Nullable="false" />
+    <Property Name="pack_errors" Type="Int32" Nullable="false" />
+    <Property Name="total_read" Type="Int32" Nullable="false" />
+    <Property Name="total_write" Type="Int32" Nullable="false" />
+    <Property Name="total_errors" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employeedetail">
+    <Key>
+      <PropertyRef Name="EmpID" />
+      <PropertyRef Name="DeptId" />
+    </Key>
+    <Property Name="EmpID" Type="Int32" Nullable="false" />
+    <Property Name="EmpName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeptId" Type="Int32" Nullable="false" />
+    <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="totalsalary" Type="Decimal" Precision="13" Scale="2" />
+  </EntityType>
+  <EntityType Name="RankingSale">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="Int32" Nullable="false" />
+    <Property Name="EmpName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Amount" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="SalesRank" Type="Int64" />
+  </EntityType>
+  <EntityType Name="spt_values">
+    <Key>
+      <PropertyRef Name="number" />
+      <PropertyRef Name="type" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="number" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="low" Type="Int32" />
+    <Property Name="high" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="v1">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+  </EntityType>
+  <EntityType Name="v2">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+  </EntityType>
+  <EntityType Name="v4">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+  </EntityType>
+  <EntityType Name="v5">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="custname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+  </EntityType>
+  <Association Name="FK__orders__custid__25A691D2">
+    <End Role="customers" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders1__custid__2C538F61">
+    <End Role="customers" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="orders1" Type="Self.orders1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders1">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders11__CustID__45DE573A">
+    <End Role="customers" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="Orders11" Type="Self.Orders11" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="Orders11">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders12__CustID__515009E6">
+    <End Role="customers" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="Orders12" Type="Self.Orders12" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="Orders12">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders2__custid__30242045">
+    <End Role="customers1" Type="Self.customers1" Multiplicity="0..1" />
+    <End Role="orders2" Type="Self.orders2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers1">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders2">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders4__custid__49E3F248">
+    <End Role="customers2" Type="Self.customers2" Multiplicity="0..1" />
+    <End Role="orders4" Type="Self.orders4" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers2">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders4">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders5__custid__51851410">
+    <End Role="customers2" Type="Self.customers2" Multiplicity="0..1" />
+    <End Role="orders5" Type="Self.orders5" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers2">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders5">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders6__custid__5832119F">
+    <End Role="customers4" Type="Self.customers4" Multiplicity="0..1" />
+    <End Role="orders6" Type="Self.orders6" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers4">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders6">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Emp1__DeptID__0A888742">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Emp1" Type="Self.Emp1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="Emp1">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__DeptID__71BCD978">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Order__49AEE81E">
+    <End Role="orders" Type="Self.order" Multiplicity="0..1" />
+    <End Role="OrderDetails11" Type="Self.OrderDetails11" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="orderid" />
+      </Principal>
+      <Dependent Role="OrderDetails11">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Produ__4AA30C57">
+    <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="OrderDetails11" Type="Self.OrderDetails11" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderDetails11">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__OrderI__4E739D3B">
+    <End Role="orders" Type="Self.order" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="orderid" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders4__product__4AD81681">
+    <End Role="products4" Type="Self.products4" Multiplicity="0..1" />
+    <End Role="orders4" Type="Self.orders4" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products4">
+        <PropertyRef Name="productid" />
+      </Principal>
+      <Dependent Role="orders4">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders5__product__52793849">
+    <End Role="products5" Type="Self.products5" Multiplicity="0..1" />
+    <End Role="orders5" Type="Self.orders5" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products5">
+        <PropertyRef Name="productid" />
+      </Principal>
+      <Dependent Role="orders5">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders6__product__592635D8">
+    <End Role="products5" Type="Self.products5" Multiplicity="0..1" />
+    <End Role="orders6" Type="Self.orders6" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products5">
+        <PropertyRef Name="productid" />
+      </Principal>
+      <Dependent Role="orders6">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="masterEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="customer10" EntityType="Self.customer10" />
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="customers1" EntityType="Self.customers1" />
+    <EntitySet Name="Customers11" EntityType="Self.Customers11" />
+    <EntitySet Name="customers2" EntityType="Self.customers2" />
+    <EntitySet Name="customers4" EntityType="Self.customers4" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="Departments1" EntityType="Self.Department1" />
+    <EntitySet Name="Dept1" EntityType="Self.Dept1" />
+    <EntitySet Name="Emp1" EntityType="Self.Emp1" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Employees1" EntityType="Self.Employee1" />
+    <EntitySet Name="one" EntityType="Self.one" />
+    <EntitySet Name="OrderDetails11" EntityType="Self.OrderDetails11" />
+    <EntitySet Name="orderhistories" EntityType="Self.orderhistory" />
+    <EntitySet Name="orders" EntityType="Self.order" />
+    <EntitySet Name="orders1" EntityType="Self.orders1" />
+    <EntitySet Name="Orders11" EntityType="Self.Orders11" />
+    <EntitySet Name="Orders12" EntityType="Self.Orders12" />
+    <EntitySet Name="orders2" EntityType="Self.orders2" />
+    <EntitySet Name="orders4" EntityType="Self.orders4" />
+    <EntitySet Name="orders5" EntityType="Self.orders5" />
+    <EntitySet Name="orders6" EntityType="Self.orders6" />
+    <EntitySet Name="Ordersses" EntityType="Self.Orderss" />
+    <EntitySet Name="Orderss1" EntityType="Self.Orderss1" />
+    <EntitySet Name="Payments" EntityType="Self.Payment" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="products1" EntityType="Self.products1" />
+    <EntitySet Name="products4" EntityType="Self.products4" />
+    <EntitySet Name="products5" EntityType="Self.products5" />
+    <EntitySet Name="Sales" EntityType="Self.Sale" />
+    <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+    <EntitySet Name="twoes" EntityType="Self.two" />
+    <EntitySet Name="customernews" EntityType="Self.customernew" />
+    <EntitySet Name="customernew1" EntityType="Self.customernew1" />
+    <EntitySet Name="customersnews" EntityType="Self.customersnew" />
+    <EntitySet Name="errorlogs" EntityType="Self.errorlog" />
+    <EntitySet Name="MSreplication_options" EntityType="Self.MSreplication_options" />
+    <EntitySet Name="spt_fallback_db" EntityType="Self.spt_fallback_db" />
+    <EntitySet Name="spt_fallback_dev" EntityType="Self.spt_fallback_dev" />
+    <EntitySet Name="spt_fallback_usg" EntityType="Self.spt_fallback_usg" />
+    <EntitySet Name="spt_monitor" EntityType="Self.spt_monitor" />
+    <EntitySet Name="Employeedetails" EntityType="Self.Employeedetail" />
+    <EntitySet Name="RankingSales" EntityType="Self.RankingSale" />
+    <EntitySet Name="spt_values" EntityType="Self.spt_values" />
+    <EntitySet Name="v1" EntityType="Self.v1" />
+    <EntitySet Name="v2" EntityType="Self.v2" />
+    <EntitySet Name="v4" EntityType="Self.v4" />
+    <EntitySet Name="v5" EntityType="Self.v5" />
+    <AssociationSet Name="FK__orders__custid__25A691D2" Association="Self.FK__orders__custid__25A691D2">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders1__custid__2C538F61" Association="Self.FK__orders1__custid__2C538F61">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="orders1" EntitySet="orders1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders11__CustID__45DE573A" Association="Self.FK__Orders11__CustID__45DE573A">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="Orders11" EntitySet="Orders11" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders12__CustID__515009E6" Association="Self.FK__Orders12__CustID__515009E6">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="Orders12" EntitySet="Orders12" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders2__custid__30242045" Association="Self.FK__orders2__custid__30242045">
+      <End Role="customers1" EntitySet="customers1" />
+      <End Role="orders2" EntitySet="orders2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders4__custid__49E3F248" Association="Self.FK__orders4__custid__49E3F248">
+      <End Role="customers2" EntitySet="customers2" />
+      <End Role="orders4" EntitySet="orders4" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders5__custid__51851410" Association="Self.FK__orders5__custid__51851410">
+      <End Role="customers2" EntitySet="customers2" />
+      <End Role="orders5" EntitySet="orders5" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders6__custid__5832119F" Association="Self.FK__orders6__custid__5832119F">
+      <End Role="customers4" EntitySet="customers4" />
+      <End Role="orders6" EntitySet="orders6" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Emp1__DeptID__0A888742" Association="Self.FK__Emp1__DeptID__0A888742">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Emp1" EntitySet="Emp1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__DeptID__71BCD978" Association="Self.FK__Employee__DeptID__71BCD978">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Order__49AEE81E" Association="Self.FK__OrderDeta__Order__49AEE81E">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="OrderDetails11" EntitySet="OrderDetails11" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Produ__4AA30C57" Association="Self.FK__OrderDeta__Produ__4AA30C57">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderDetails11" EntitySet="OrderDetails11" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__OrderI__4E739D3B" Association="Self.FK__Payments__OrderI__4E739D3B">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders4__product__4AD81681" Association="Self.FK__orders4__product__4AD81681">
+      <End Role="products4" EntitySet="products4" />
+      <End Role="orders4" EntitySet="orders4" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders5__product__52793849" Association="Self.FK__orders5__product__52793849">
+      <End Role="products5" EntitySet="products5" />
+      <End Role="orders5" EntitySet="orders5" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders6__product__592635D8" Association="Self.FK__orders6__product__592635D8">
+      <End Role="products5" EntitySet="products5" />
+      <End Role="orders6" EntitySet="orders6" />
+    </AssociationSet>
+    <FunctionImport Name="lastyrorder" IsComposable="true" ReturnType="Collection(masterModel.lastyrorder_Result)">
+      <Parameter Name="n" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Addproc">
+      <Parameter Name="a" Mode="In" Type="Int32" />
+      <Parameter Name="b" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Addproc1">
+      <Parameter Name="a" Mode="In" Type="Int32" />
+      <Parameter Name="b" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Addproc2">
+      <Parameter Name="a" Mode="In" Type="Int32" />
+      <Parameter Name="b" Mode="In" Type="Int32" />
+      <Parameter Name="c" Mode="InOut" Type="Int32" />
+      <Parameter Name="d" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="divide">
+      <Parameter Name="a" Mode="In" Type="Int32" />
+      <Parameter Name="b" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getdata" />
+    <FunctionImport Name="getstudents" />
+    <FunctionImport Name="getstudents1" ReturnType="Collection(masterModel.getstudents1_Result)">
+      <Parameter Name="a" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="insert_customer">
+      <Parameter Name="cus_id" Mode="In" Type="Byte" />
+      <Parameter Name="cust_name" Mode="In" Type="String" />
+      <Parameter Name="cust_age" Mode="In" Type="Byte" />
+      <Parameter Name="cust_address" Mode="In" Type="String" />
+      <Parameter Name="cust_phone" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="orderdates" ReturnType="Collection(masterModel.orderdates_Result)">
+      <Parameter Name="start_date" Mode="In" Type="DateTime" />
+      <Parameter Name="end_date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="orderdetails">
+      <Parameter Name="custid" Mode="In" Type="Int32" />
+      <Parameter Name="qty" Mode="InOut" Type="Int32" />
+      <Parameter Name="productid" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getdata" />
+    <FunctionImport Name="sp_getemp" ReturnType="Collection(masterModel.sp_getemp_Result)">
+      <Parameter Name="d" Mode="In" Type="Int32" />
+      <Parameter Name="sal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getemployee" ReturnType="Collection(masterModel.sp_getemployee_Result)">
+      <Parameter Name="startdate" Mode="In" Type="DateTime" />
+      <Parameter Name="enddate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_MScleanupmergepublisher" />
+    <FunctionImport Name="sp_MSrepl_startup" />
+    <FunctionImport Name="sp_orderdetails">
+      <Parameter Name="custid" Mode="In" Type="Int32" />
+      <Parameter Name="qty" Mode="InOut" Type="Int32" />
+      <Parameter Name="productid" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_orderdetails1">
+      <Parameter Name="custid" Mode="In" Type="Int32" />
+      <Parameter Name="qty" Mode="InOut" Type="Int32" />
+      <Parameter Name="productname" Mode="InOut" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="getstudents1_Result">
+    <Property Type="Int32" Name="EmpId" Nullable="false" />
+    <Property Type="String" Name="EmpName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="DeptId" Nullable="true" />
+    <Property Type="Int32" Name="ManagerId" Nullable="true" />
+    <Property Type="DateTime" Name="JoinDate" Nullable="true" />
+    <Property Type="Decimal" Name="Salary" Nullable="true" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="orderdates_Result">
+    <Property Type="Int32" Name="orderid" Nullable="false" />
+    <Property Type="Int32" Name="custid" Nullable="true" />
+    <Property Type="DateTime" Name="orderdate" Nullable="true" />
+    <Property Type="String" Name="oproduct" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="price" Nullable="true" />
+    <Property Type="Int32" Name="quantity" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getemp_Result">
+    <Property Type="Int32" Name="EmpID" Nullable="false" />
+    <Property Type="String" Name="EmpName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Salary" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="DateTime" Name="DateOfJoin" Nullable="true" />
+    <Property Type="Int32" Name="DeptID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_getemployee_Result">
+    <Property Type="Int32" Name="Empid" Nullable="false" />
+    <Property Type="String" Name="EmpName" Nullable="true" MaxLength="100" />
+    <Property Type="Decimal" Name="Salary" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="DateTime" Name="DateofJoin" Nullable="true" />
+    <Property Type="Int32" Name="Deptid" Nullable="true" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,11 @@
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\obj\Debug\EntityDemo1.csproj.AssemblyReference.cache
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\obj\Debug\EntityDemo1.csproj.CoreCompileInputs.cache
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\bin\Debug\EntityDemo1.exe.config
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\bin\Debug\EntityDemo1.exe
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\bin\Debug\EntityDemo1.pdb
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\bin\Debug\EntityFramework.dll
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\bin\Debug\EntityFramework.xml
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\obj\Debug\EntityDe.6A0B3990.Up2Date
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\obj\Debug\EntityDemo1.exe
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\obj\Debug\EntityDemo1.pdb
+C:\practice_sessions\Ado\day4\EntityDemo1\EntityDemo1\obj\Debug\EntityDemo1.exe.config

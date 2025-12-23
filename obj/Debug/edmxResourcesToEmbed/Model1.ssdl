@@ -1,0 +1,1132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.BankAcc' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="BankAcc">
+          <Property Name="accid" Type="tinyint" />
+          <Property Name="accname" Type="varchar" MaxLength="50" />
+          <Property Name="balance" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.customer' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="customer">
+          <Property Name="custid" Type="int" />
+          <Property Name="custname" Type="varchar" MaxLength="20" />
+          <Property Name="age" Type="tinyint" />
+          <Property Name="caddress" Type="varchar" MaxLength="50" />
+          <Property Name="cphone" Type="int" />
+        </EntityType>-->
+  <EntityType Name="customer10">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="caddress" Type="varchar" MaxLength="50" />
+    <Property Name="phone" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.customernew' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="customernew">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+    <Property Name="caddress" Type="varchar" MaxLength="50" />
+    <Property Name="cphone" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.customernew1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="customernew1">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+    <Property Name="caddress" Type="varchar" MaxLength="50" />
+    <Property Name="cphone" Type="int" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+    <Property Name="caddress" Type="varchar" MaxLength="50" />
+    <Property Name="cphone" Type="int" />
+  </EntityType>
+  <EntityType Name="customers1">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+    <Property Name="caddress" Type="varchar" MaxLength="50" />
+    <Property Name="cphone" Type="int" />
+  </EntityType>
+  <EntityType Name="Customers11">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="int" Nullable="false" />
+    <Property Name="CustName" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="City" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="customers2">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="caddress" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="customers4">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="caddress" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.customersnew' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="customersnew">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+    <Property Name="caddress" Type="varchar" MaxLength="50" />
+    <Property Name="cphone" Type="int" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="int" Nullable="false" />
+    <Property Name="DeptName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="DeptId" />
+    </Key>
+    <Property Name="DeptId" Type="int" Nullable="false" />
+    <Property Name="DeptName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Dept1">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="int" Nullable="false" />
+    <Property Name="DeptName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Emp1">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="100" />
+    <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DateOfJoin" Type="date" />
+    <Property Name="DeptID" Type="int" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="100" />
+    <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="DateOfJoin" Type="date" />
+    <Property Name="DeptID" Type="int" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="int" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="100" />
+    <Property Name="DeptId" Type="int" />
+    <Property Name="ManagerId" Type="int" />
+    <Property Name="JoinDate" Type="date" />
+    <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.errorlog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="errorlog">
+    <Key>
+      <PropertyRef Name="error_id" />
+    </Key>
+    <Property Name="error_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="errormessage" Type="nvarchar" MaxLength="4000" />
+    <Property Name="errorseverity" Type="int" />
+    <Property Name="errorstate" Type="int" />
+    <Property Name="error_time" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.MSreplication_options' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MSreplication_options">
+    <Key>
+      <PropertyRef Name="optname" />
+      <PropertyRef Name="value" />
+      <PropertyRef Name="major_version" />
+      <PropertyRef Name="minor_version" />
+      <PropertyRef Name="revision" />
+      <PropertyRef Name="install_failures" />
+    </Key>
+    <Property Name="optname" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="value" Type="bit" Nullable="false" />
+    <Property Name="major_version" Type="int" Nullable="false" />
+    <Property Name="minor_version" Type="int" Nullable="false" />
+    <Property Name="revision" Type="int" Nullable="false" />
+    <Property Name="install_failures" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="one">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="int" Nullable="false" />
+    <Property Name="cname" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="OrderDetails11">
+    <Key>
+      <PropertyRef Name="DetailID" />
+    </Key>
+    <Property Name="DetailID" Type="int" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Qty" Type="int" />
+  </EntityType>
+  <EntityType Name="orderhistory">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="custid" Type="int" />
+    <Property Name="orderdate" Type="date" />
+    <Property Name="oproduct" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="custid" Type="int" />
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="orderdate" Type="date" />
+    <Property Name="ordproduct" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="qty" Type="int" />
+  </EntityType>
+  <EntityType Name="orders1">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="custid" Type="int" />
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="orderdate" Type="date" />
+    <Property Name="ordproduct" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="qty" Type="int" />
+  </EntityType>
+  <EntityType Name="Orders11">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="CustID" Type="int" />
+    <Property Name="OrderDate" Type="date" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Orders12">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="CustID" Type="int" />
+    <Property Name="OrderDate" Type="date" />
+    <Property Name="Statuss" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="orders2">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="custid" Type="int" />
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="orderdate" Type="date" />
+    <Property Name="ordproduct" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="int" />
+    <Property Name="qty" Type="int" />
+  </EntityType>
+  <EntityType Name="orders4">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="custid" Type="int" />
+    <Property Name="productid" Type="int" />
+    <Property Name="orderdate" Type="date" />
+    <Property Name="qty" Type="int" />
+    <Property Name="price" Type="int" />
+  </EntityType>
+  <EntityType Name="orders5">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="custid" Type="int" />
+    <Property Name="productid" Type="int" />
+    <Property Name="orderdate" Type="date" />
+    <Property Name="qty" Type="int" />
+    <Property Name="price" Type="int" />
+  </EntityType>
+  <EntityType Name="orders6">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="custid" Type="int" />
+    <Property Name="productid" Type="int" />
+    <Property Name="orderdate" Type="date" />
+    <Property Name="qty" Type="int" />
+    <Property Name="price" Type="int" />
+  </EntityType>
+  <EntityType Name="Orderss">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="order_name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Orderss1">
+    <Key>
+      <PropertyRef Name="orderid" />
+    </Key>
+    <Property Name="orderid" Type="int" Nullable="false" />
+    <Property Name="ordername" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="int" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="PaymentDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="100" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Stock" Type="int" />
+  </EntityType>
+  <EntityType Name="products1">
+    <Key>
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="productid" Type="int" Nullable="false" />
+    <Property Name="productname" Type="varchar" MaxLength="30" />
+    <Property Name="category" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="products4">
+    <Key>
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="productid" Type="int" Nullable="false" />
+    <Property Name="productname" Type="varchar" MaxLength="30" />
+    <Property Name="category" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="products5">
+    <Key>
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="productid" Type="int" Nullable="false" />
+    <Property Name="productname" Type="varchar" MaxLength="30" />
+    <Property Name="category" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="SaleId" />
+    </Key>
+    <Property Name="SaleId" Type="int" Nullable="false" />
+    <Property Name="EmpId" Type="int" />
+    <Property Name="Region" Type="varchar" MaxLength="50" />
+    <Property Name="SaleAmount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="SaleDate" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.Sales1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Sales1">
+          <Property Name="Id" Type="int" />
+          <Property Name="Amount" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_db' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="spt_fallback_db">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="dbid" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+    <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+    <Property Name="xfallback_dbid" Type="smallint" />
+    <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="dbid" Type="smallint" Nullable="false" />
+    <Property Name="status" Type="smallint" Nullable="false" />
+    <Property Name="version" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_dev' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="spt_fallback_dev">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="low" />
+      <PropertyRef Name="high" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="phyname" />
+    </Key>
+    <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+    <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+    <Property Name="xfallback_low" Type="int" />
+    <Property Name="xfallback_drive" Type="char" MaxLength="2" />
+    <Property Name="low" Type="int" Nullable="false" />
+    <Property Name="high" Type="int" Nullable="false" />
+    <Property Name="status" Type="smallint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="phyname" Type="varchar" MaxLength="127" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_usg' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="spt_fallback_usg">
+    <Key>
+      <PropertyRef Name="xserver_name" />
+      <PropertyRef Name="xdttm_ins" />
+      <PropertyRef Name="xdttm_last_ins_upd" />
+      <PropertyRef Name="dbid" />
+      <PropertyRef Name="segmap" />
+      <PropertyRef Name="lstart" />
+      <PropertyRef Name="sizepg" />
+      <PropertyRef Name="vstart" />
+    </Key>
+    <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+    <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+    <Property Name="xfallback_vstart" Type="int" />
+    <Property Name="dbid" Type="smallint" Nullable="false" />
+    <Property Name="segmap" Type="int" Nullable="false" />
+    <Property Name="lstart" Type="int" Nullable="false" />
+    <Property Name="sizepg" Type="int" Nullable="false" />
+    <Property Name="vstart" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_monitor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="spt_monitor">
+    <Key>
+      <PropertyRef Name="lastrun" />
+      <PropertyRef Name="cpu_busy" />
+      <PropertyRef Name="io_busy" />
+      <PropertyRef Name="idle" />
+      <PropertyRef Name="pack_received" />
+      <PropertyRef Name="pack_sent" />
+      <PropertyRef Name="connections" />
+      <PropertyRef Name="pack_errors" />
+      <PropertyRef Name="total_read" />
+      <PropertyRef Name="total_write" />
+      <PropertyRef Name="total_errors" />
+    </Key>
+    <Property Name="lastrun" Type="datetime" Nullable="false" />
+    <Property Name="cpu_busy" Type="int" Nullable="false" />
+    <Property Name="io_busy" Type="int" Nullable="false" />
+    <Property Name="idle" Type="int" Nullable="false" />
+    <Property Name="pack_received" Type="int" Nullable="false" />
+    <Property Name="pack_sent" Type="int" Nullable="false" />
+    <Property Name="connections" Type="int" Nullable="false" />
+    <Property Name="pack_errors" Type="int" Nullable="false" />
+    <Property Name="total_read" Type="int" Nullable="false" />
+    <Property Name="total_write" Type="int" Nullable="false" />
+    <Property Name="total_errors" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.student' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="student">
+          <Property Name="studentid" Type="int" />
+          <Property Name="studentname" Type="varchar" MaxLength="20" />
+          <Property Name="age" Type="tinyint" />
+          <Property Name="saddress" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.test1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test1">
+          <Property Name="cid" Type="int" />
+          <Property Name="cname" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'master.dbo.test2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test2">
+          <Property Name="cid" Type="int" />
+          <Property Name="cname" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <EntityType Name="Transactions">
+    <Key>
+      <PropertyRef Name="TransId" />
+    </Key>
+    <Property Name="TransId" Type="int" Nullable="false" />
+    <Property Name="AccountId" Type="int" />
+    <Property Name="Amount" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="TransDate" Type="date" />
+  </EntityType>
+  <EntityType Name="two">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="int" Nullable="false" />
+    <Property Name="cname" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.Employeedetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employeedetails">
+    <Key>
+      <PropertyRef Name="EmpID" />
+      <PropertyRef Name="DeptId" />
+    </Key>
+    <Property Name="EmpID" Type="int" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="100" />
+    <Property Name="DeptId" Type="int" Nullable="false" />
+    <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="totalsalary" Type="decimal" Precision="13" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.RankingSales' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RankingSales">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="int" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="100" />
+    <Property Name="Total_Amount" Type="decimal" Precision="38" Scale="2" />
+    <Property Name="SalesRank" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_values' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="spt_values">
+    <Key>
+      <PropertyRef Name="number" />
+      <PropertyRef Name="type" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="35" />
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="type" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="low" Type="int" />
+    <Property Name="high" Type="int" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.v1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="v1">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.v2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="v2">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.v4' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="v4">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.v5' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="v5">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="custname" Type="varchar" MaxLength="20" />
+    <Property Name="age" Type="tinyint" />
+  </EntityType>
+  <Association Name="FK__Emp1__DeptID__0A888742">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Emp1" Type="Self.Emp1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="Emp1">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__DeptID__71BCD978">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="DeptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Order__49AEE81E">
+    <End Role="orders" Type="Self.orders" Multiplicity="0..1" />
+    <End Role="OrderDetails11" Type="Self.OrderDetails11" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="orderid" />
+      </Principal>
+      <Dependent Role="OrderDetails11">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Produ__4AA30C57">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="OrderDetails11" Type="Self.OrderDetails11" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderDetails11">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders__custid__25A691D2">
+    <End Role="customers" Type="Self.customers" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders1__custid__2C538F61">
+    <End Role="customers" Type="Self.customers" Multiplicity="0..1" />
+    <End Role="orders1" Type="Self.orders1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders1">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders11__CustID__45DE573A">
+    <End Role="customers" Type="Self.customers" Multiplicity="0..1" />
+    <End Role="Orders11" Type="Self.Orders11" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="Orders11">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders12__CustID__515009E6">
+    <End Role="customers" Type="Self.customers" Multiplicity="0..1" />
+    <End Role="Orders12" Type="Self.Orders12" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="Orders12">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders2__custid__30242045">
+    <End Role="customers1" Type="Self.customers1" Multiplicity="0..1" />
+    <End Role="orders2" Type="Self.orders2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers1">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders2">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders4__custid__49E3F248">
+    <End Role="customers2" Type="Self.customers2" Multiplicity="0..1" />
+    <End Role="orders4" Type="Self.orders4" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers2">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders4">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders4__product__4AD81681">
+    <End Role="products4" Type="Self.products4" Multiplicity="0..1" />
+    <End Role="orders4" Type="Self.orders4" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products4">
+        <PropertyRef Name="productid" />
+      </Principal>
+      <Dependent Role="orders4">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders5__custid__51851410">
+    <End Role="customers2" Type="Self.customers2" Multiplicity="0..1" />
+    <End Role="orders5" Type="Self.orders5" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers2">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders5">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders5__product__52793849">
+    <End Role="products5" Type="Self.products5" Multiplicity="0..1" />
+    <End Role="orders5" Type="Self.orders5" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products5">
+        <PropertyRef Name="productid" />
+      </Principal>
+      <Dependent Role="orders5">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders6__custid__5832119F">
+    <End Role="customers4" Type="Self.customers4" Multiplicity="0..1" />
+    <End Role="orders6" Type="Self.orders6" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers4">
+        <PropertyRef Name="custid" />
+      </Principal>
+      <Dependent Role="orders6">
+        <PropertyRef Name="custid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders6__product__592635D8">
+    <End Role="products5" Type="Self.products5" Multiplicity="0..1" />
+    <End Role="orders6" Type="Self.orders6" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products5">
+        <PropertyRef Name="productid" />
+      </Principal>
+      <Dependent Role="orders6">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__OrderI__4E739D3B">
+    <End Role="orders" Type="Self.orders" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="orderid" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Addproc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="a" Type="int" Mode="In" />
+    <Parameter Name="b" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Addproc1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="a" Type="int" Mode="In" />
+    <Parameter Name="b" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Addproc2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="a" Type="int" Mode="In" />
+    <Parameter Name="b" Type="int" Mode="In" />
+    <Parameter Name="c" Type="int" Mode="InOut" />
+    <Parameter Name="d" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="CalculateDiscount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="Price" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="CalculateDiscountByProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="product" Type="varchar" Mode="In" />
+    <Parameter Name="Price" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="CalDiscount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="ordproduct" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="CalDiscountProd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="ordproduct" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="CalDisProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="oproduct" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="divide" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="a" Type="int" Mode="In" />
+    <Parameter Name="b" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getstudents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getstudents1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="a" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="greatestnum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="a" Type="int" Mode="In" />
+    <Parameter Name="b" Type="int" Mode="In" />
+    <Parameter Name="c" Type="int" Mode="In" />
+  </Function>
+  <Function Name="insert_customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cus_id" Type="tinyint" Mode="In" />
+    <Parameter Name="cust_name" Type="varchar" Mode="In" />
+    <Parameter Name="cust_age" Type="tinyint" Mode="In" />
+    <Parameter Name="cust_address" Type="varchar" Mode="In" />
+    <Parameter Name="cust_phone" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="lastyrorder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="n" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="custid" Type="int" />
+          <Property Name="orderid" Type="int" Nullable="false" />
+          <Property Name="orderdate" Type="date" />
+          <Property Name="ordproduct" Type="varchar" MaxLength="50" />
+          <Property Name="price" Type="int" />
+          <Property Name="qty" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="orderdates" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="start_date" Type="date" Mode="In" />
+    <Parameter Name="end_date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="orderdetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="custid" Type="int" Mode="In" />
+    <Parameter Name="qty" Type="int" Mode="InOut" />
+    <Parameter Name="productid" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_getdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_getemp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="d" Type="int" Mode="In" />
+    <Parameter Name="sal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getemployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="startdate" Type="date" Mode="In" />
+    <Parameter Name="enddate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_MScleanupmergepublisher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_MSrepl_startup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_orderdetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="custid" Type="int" Mode="In" />
+    <Parameter Name="qty" Type="int" Mode="InOut" />
+    <Parameter Name="productid" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_orderdetails1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="custid" Type="int" Mode="In" />
+    <Parameter Name="qty" Type="int" Mode="InOut" />
+    <Parameter Name="productname" Type="varchar" Mode="InOut" />
+  </Function>
+  <EntityContainer Name="masterModelStoreContainer">
+    <EntitySet Name="customer10" EntityType="Self.customer10" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers1" EntityType="Self.customers1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers11" EntityType="Self.Customers11" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers2" EntityType="Self.customers2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers4" EntityType="Self.customers4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dept1" EntityType="Self.Dept1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Emp1" EntityType="Self.Emp1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="one" EntityType="Self.one" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetails11" EntityType="Self.OrderDetails11" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orderhistory" EntityType="Self.orderhistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders1" EntityType="Self.orders1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders11" EntityType="Self.Orders11" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders12" EntityType="Self.Orders12" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders2" EntityType="Self.orders2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders4" EntityType="Self.orders4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders5" EntityType="Self.orders5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders6" EntityType="Self.orders6" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orderss" EntityType="Self.Orderss" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orderss1" EntityType="Self.Orderss1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="products1" EntityType="Self.products1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="products4" EntityType="Self.products4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="products5" EntityType="Self.products5" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="two" EntityType="Self.two" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customernew" EntityType="Self.customernew" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[customernew].[custid] AS [custid], 
+[customernew].[custname] AS [custname], 
+[customernew].[age] AS [age], 
+[customernew].[caddress] AS [caddress], 
+[customernew].[cphone] AS [cphone]
+FROM [dbo].[customernew] AS [customernew]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="customernew1" EntityType="Self.customernew1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[customernew1].[custid] AS [custid], 
+[customernew1].[custname] AS [custname], 
+[customernew1].[age] AS [age], 
+[customernew1].[caddress] AS [caddress], 
+[customernew1].[cphone] AS [cphone]
+FROM [dbo].[customernew1] AS [customernew1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="customersnew" EntityType="Self.customersnew" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[customersnew].[custid] AS [custid], 
+[customersnew].[custname] AS [custname], 
+[customersnew].[age] AS [age], 
+[customersnew].[caddress] AS [caddress], 
+[customersnew].[cphone] AS [cphone]
+FROM [dbo].[customersnew] AS [customersnew]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="errorlog" EntityType="Self.errorlog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[errorlog].[error_id] AS [error_id], 
+[errorlog].[errormessage] AS [errormessage], 
+[errorlog].[errorseverity] AS [errorseverity], 
+[errorlog].[errorstate] AS [errorstate], 
+[errorlog].[error_time] AS [error_time]
+FROM [dbo].[errorlog] AS [errorlog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MSreplication_options" EntityType="Self.MSreplication_options" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[MSreplication_options].[optname] AS [optname], 
+[MSreplication_options].[value] AS [value], 
+[MSreplication_options].[major_version] AS [major_version], 
+[MSreplication_options].[minor_version] AS [minor_version], 
+[MSreplication_options].[revision] AS [revision], 
+[MSreplication_options].[install_failures] AS [install_failures]
+FROM [dbo].[MSreplication_options] AS [MSreplication_options]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="spt_fallback_db" EntityType="Self.spt_fallback_db" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[spt_fallback_db].[xserver_name] AS [xserver_name], 
+[spt_fallback_db].[xdttm_ins] AS [xdttm_ins], 
+[spt_fallback_db].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+[spt_fallback_db].[xfallback_dbid] AS [xfallback_dbid], 
+[spt_fallback_db].[name] AS [name], 
+[spt_fallback_db].[dbid] AS [dbid], 
+[spt_fallback_db].[status] AS [status], 
+[spt_fallback_db].[version] AS [version]
+FROM [dbo].[spt_fallback_db] AS [spt_fallback_db]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="spt_fallback_dev" EntityType="Self.spt_fallback_dev" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[spt_fallback_dev].[xserver_name] AS [xserver_name], 
+[spt_fallback_dev].[xdttm_ins] AS [xdttm_ins], 
+[spt_fallback_dev].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+[spt_fallback_dev].[xfallback_low] AS [xfallback_low], 
+[spt_fallback_dev].[xfallback_drive] AS [xfallback_drive], 
+[spt_fallback_dev].[low] AS [low], 
+[spt_fallback_dev].[high] AS [high], 
+[spt_fallback_dev].[status] AS [status], 
+[spt_fallback_dev].[name] AS [name], 
+[spt_fallback_dev].[phyname] AS [phyname]
+FROM [dbo].[spt_fallback_dev] AS [spt_fallback_dev]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="spt_fallback_usg" EntityType="Self.spt_fallback_usg" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[spt_fallback_usg].[xserver_name] AS [xserver_name], 
+[spt_fallback_usg].[xdttm_ins] AS [xdttm_ins], 
+[spt_fallback_usg].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+[spt_fallback_usg].[xfallback_vstart] AS [xfallback_vstart], 
+[spt_fallback_usg].[dbid] AS [dbid], 
+[spt_fallback_usg].[segmap] AS [segmap], 
+[spt_fallback_usg].[lstart] AS [lstart], 
+[spt_fallback_usg].[sizepg] AS [sizepg], 
+[spt_fallback_usg].[vstart] AS [vstart]
+FROM [dbo].[spt_fallback_usg] AS [spt_fallback_usg]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="spt_monitor" EntityType="Self.spt_monitor" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[spt_monitor].[lastrun] AS [lastrun], 
+[spt_monitor].[cpu_busy] AS [cpu_busy], 
+[spt_monitor].[io_busy] AS [io_busy], 
+[spt_monitor].[idle] AS [idle], 
+[spt_monitor].[pack_received] AS [pack_received], 
+[spt_monitor].[pack_sent] AS [pack_sent], 
+[spt_monitor].[connections] AS [connections], 
+[spt_monitor].[pack_errors] AS [pack_errors], 
+[spt_monitor].[total_read] AS [total_read], 
+[spt_monitor].[total_write] AS [total_write], 
+[spt_monitor].[total_errors] AS [total_errors]
+FROM [dbo].[spt_monitor] AS [spt_monitor]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Employeedetails" EntityType="Self.Employeedetails" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Employeedetails].[EmpID] AS [EmpID], 
+[Employeedetails].[EmpName] AS [EmpName], 
+[Employeedetails].[DeptId] AS [DeptId], 
+[Employeedetails].[Salary] AS [Salary], 
+[Employeedetails].[totalsalary] AS [totalsalary]
+FROM [dbo].[Employeedetails] AS [Employeedetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RankingSales" EntityType="Self.RankingSales" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[RankingSales].[EmpID] AS [EmpID], 
+[RankingSales].[EmpName] AS [EmpName], 
+[RankingSales].[Total_Amount] AS [Total_Amount], 
+[RankingSales].[SalesRank] AS [SalesRank]
+FROM [dbo].[RankingSales] AS [RankingSales]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="spt_values" EntityType="Self.spt_values" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[spt_values].[name] AS [name], 
+[spt_values].[number] AS [number], 
+[spt_values].[type] AS [type], 
+[spt_values].[low] AS [low], 
+[spt_values].[high] AS [high], 
+[spt_values].[status] AS [status]
+FROM [dbo].[spt_values] AS [spt_values]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v1" EntityType="Self.v1" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[v1].[custid] AS [custid], 
+[v1].[custname] AS [custname], 
+[v1].[age] AS [age]
+FROM [dbo].[v1] AS [v1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v2" EntityType="Self.v2" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[v2].[custid] AS [custid], 
+[v2].[custname] AS [custname], 
+[v2].[age] AS [age]
+FROM [dbo].[v2] AS [v2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v4" EntityType="Self.v4" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[v4].[custid] AS [custid], 
+[v4].[custname] AS [custname], 
+[v4].[age] AS [age]
+FROM [dbo].[v4] AS [v4]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v5" EntityType="Self.v5" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[v5].[custid] AS [custid], 
+[v5].[custname] AS [custname], 
+[v5].[age] AS [age]
+FROM [dbo].[v5] AS [v5]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Emp1__DeptID__0A888742" Association="Self.FK__Emp1__DeptID__0A888742">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Emp1" EntitySet="Emp1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__DeptID__71BCD978" Association="Self.FK__Employee__DeptID__71BCD978">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Order__49AEE81E" Association="Self.FK__OrderDeta__Order__49AEE81E">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="OrderDetails11" EntitySet="OrderDetails11" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Produ__4AA30C57" Association="Self.FK__OrderDeta__Produ__4AA30C57">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderDetails11" EntitySet="OrderDetails11" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders__custid__25A691D2" Association="Self.FK__orders__custid__25A691D2">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders1__custid__2C538F61" Association="Self.FK__orders1__custid__2C538F61">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="orders1" EntitySet="orders1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders11__CustID__45DE573A" Association="Self.FK__Orders11__CustID__45DE573A">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="Orders11" EntitySet="Orders11" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders12__CustID__515009E6" Association="Self.FK__Orders12__CustID__515009E6">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="Orders12" EntitySet="Orders12" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders2__custid__30242045" Association="Self.FK__orders2__custid__30242045">
+      <End Role="customers1" EntitySet="customers1" />
+      <End Role="orders2" EntitySet="orders2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders4__custid__49E3F248" Association="Self.FK__orders4__custid__49E3F248">
+      <End Role="customers2" EntitySet="customers2" />
+      <End Role="orders4" EntitySet="orders4" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders4__product__4AD81681" Association="Self.FK__orders4__product__4AD81681">
+      <End Role="products4" EntitySet="products4" />
+      <End Role="orders4" EntitySet="orders4" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders5__custid__51851410" Association="Self.FK__orders5__custid__51851410">
+      <End Role="customers2" EntitySet="customers2" />
+      <End Role="orders5" EntitySet="orders5" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders5__product__52793849" Association="Self.FK__orders5__product__52793849">
+      <End Role="products5" EntitySet="products5" />
+      <End Role="orders5" EntitySet="orders5" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders6__custid__5832119F" Association="Self.FK__orders6__custid__5832119F">
+      <End Role="customers4" EntitySet="customers4" />
+      <End Role="orders6" EntitySet="orders6" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders6__product__592635D8" Association="Self.FK__orders6__product__592635D8">
+      <End Role="products5" EntitySet="products5" />
+      <End Role="orders6" EntitySet="orders6" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__OrderI__4E739D3B" Association="Self.FK__Payments__OrderI__4E739D3B">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
